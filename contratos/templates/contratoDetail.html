@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Detalhe do Contrato{% endblock %}
+{% block sistema %}
+{% block menu %}
+{% include 'home/menu.html' %}
+{% endblock %}
+<div class="page">
+    <!-- navbar-->
+    {% block header %}
+    {% include 'home/header.html' %}
+    {% endblock %}
+    <!-- Counts Section -->
+    <div class="col-lg-12" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-body">
+                <div class="listagemGeral">
+                    <hr>
+                    <h3 style="margin-left:37%;">Detalhe do contrato</h3>
+                    <hr>
+                    <div class="form-row">
+                        <div class="form-group col-md-1">
+                            <label for="inputEmail4">Contrato:</label>
+                            <input type="text" class="form-control" id="inputEmail4" value="{{contratos.numcontrato}}"
+                                   readonly="True">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Imovel:</label>
+                            <input type="text" class="form-control" id="" value="{{contratos.imovel}}" readonly="True">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Morador:</label>
+                            <input type="text" class="form-control" id="" value="{{contratos.morador}}" readonly="True">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="inputCity">Data de entrada:</label>
+                            <input type="text" class="form-control" value="{{contratos.data_entrada}}" readonly="True">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <label for="inputState">Vigencia:</label>
+                            <input type="text" class="form-control" value="{{contratos.vigencia}}" readonly="True">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Vencimento:</label>
+                            <input type="text" class="form-control" value="{{contratos.vencimento}}" readonly="True">
+                        </div>
+                    </div>
+                    <hr>
+                    <!---- mostra os documentos e fotos adicionados ao contrato selecionado--->
+                    <h3 style="margin-left:40%;">Anexo</h3>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                               role="tab"
+                               aria-controls="nav-home" aria-selected="true">Documentos</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                               role="tab"
+                               aria-controls="nav-profile" aria-selected="false">Fotos</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            {% block docview %}
+                            {% include 'documentoView.html' %}
+                            {% endblock %}
+                            <br>
+                            {% block documento %}
+                            {% include 'documento.html' %}
+                            {% endblock %}
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            {% block photoview %}
+                            {% include 'photo_view.html' %}
+                            {% endblock %}
+                            <br>
+                            {% block photo %}
+                            {% include 'photo_form.html' %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

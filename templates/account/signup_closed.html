@@ -1,0 +1,22 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Up Closed" %}{% endblock %}
+
+{% block main
+<div class="page login-page">
+    <div class="container" style="margin-left:10%;">
+        <div class="form-outer text-center d-flex align-items-center">
+            <div class="form-inner">
+                <div class="logo text-uppercase">
+                    <span>Sistema</span><strong class="" style="color: black;">Condado</strong>
+                </div>
+                <h1>{% trans "Sign Up Closed" %}</h1>
+
+                <p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

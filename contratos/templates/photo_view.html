@@ -1,0 +1,33 @@
+{% block photoview %}
+
+<body>
+<br>
+<table class="table table-responsive-lg table-bordered ">
+    <thead>
+    <tr>
+        <th scope="col">Anexado em</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Arquivo</th>
+        <th scope="col">Opções</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for pholists in pholist %}
+    <tr>
+        <td><a>{{pholists.data}}</a></td>
+        <td><a>Documento</a></td>
+        <td><a href="{{pholists.foto}}">{{pholists.foto}}</a></td>
+        <td>
+            <a href=""
+               class="material-icons"
+               style="font-size:23px;color:red">
+                cancel</a>
+            <!-- The Modal -->
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+
+{% endblock %}

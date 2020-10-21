@@ -1,0 +1,102 @@
+{% load static %}
+{% block signup%}
+<form class="signup" id="signup_form" method="post" action="/proprietario/novo/">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="inputName">Nome:</label>
+        <input type="text" name="nome" class="form-control">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputIdentidade">Identidade: </label>
+            <input type="text" name="identidade" class="form-control" id="inputIdentidade"
+                   onkeypress="$(this).mask('00.000.000-0');">
+        </div>
+        <div class="form-group col-md-6">
+            <label>CPF: </label>
+            <!--            <input type="text" name="cpf" class="form-control" id="inputCPF" value="">-->
+            <input type="text" name="cpf" minlength="11" maxlength="11" class="form-control"
+                   onkeypress="$(this).mask('000.000.000-00');">
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputName">Username:</label>
+        <input type="text" name="username" class="form-control" id="inputName">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firtName">senha: </label>
+            <input type="password" name="password" class="form-control" id="firtName">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Senha (novamente): </label>
+            <input type="password" name="password2" class="form-control" id="inputPassword4">
+        </div>
+         {% if messages %}
+                {% for m in messages %}
+                    <div class="alert alert-warning" role="alert">
+                        {{m}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="text" name="email" class="form-control">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>CEP</label>
+            <!--            <input type="text"  name="cep" class="form-control">-->
+            <input name="cep" type="text" id="cep" class="form-control" value="" size="10" maxlength="9"
+                   onblur="pesquisacep(this.value);" onkeypress="$(this).mask('00.000-000')"/>
+
+        </div>
+        <div class="form-group col-md-6">
+            <label>Telefone:</label>
+            <input type="text" name="telefone" class="form-control" onkeypress="$(this).mask('(00) 00000-0000')" />
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Endereço:</label>
+        <input type="text" name="endereco" id="id_endereco" size="60" class="form-control" disabled />
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>numero:</label>
+            <input type="text" name="numero" class="form-control" />
+        </div>
+        <div class="form-group col-md-6">
+            <label>Bairro:</label>
+            <input name="bairro" type="text" id="id_bairro" size="40"
+                   class="form-control" disabled />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Cidade:</label>
+            <input name="cidade" type="text" id="id_cidade" size="40"
+                   class="form-control" disabled />
+        </div>
+        <div class="form-group col-md-6">
+            <label>Estado:</label>
+            <input name="estado" type="text" id="id_estado" size="40"
+                   class="form-control" disabled />
+        </div>
+        <div class="form-group col-md-6">
+            <label style="display:none">ibge:</label>
+            <input style="display:none" name="ibge" type="text" id="id_ibge" size="40" class="form-control" />
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-info" style="margin-left:0%;">Registrar</button>
+</form>
+<!--<small style="margin-left:0%;">Possui uma conta? </small>-->
+<!--<a href="/accounts/login/" class="signup">Logar</a>-->
+
+{% endblock %}

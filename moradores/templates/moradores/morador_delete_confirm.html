@@ -1,0 +1,22 @@
+{% block teste2Delete %}
+<div class="col-lg-12" style="margin-top:10px;">
+    <div class="card">
+        <div class="card-body">
+            <div class="listagemGeral">
+                <hr>
+                <h1 style="margin-left:10%;">Tem certeza que deseja excluir o(a) morador(a) ? </h1>
+                <br>
+                <h3>Morador: {{cliente.nome}}</h3>
+                <hr>
+                <form method="POST" enctype="multipart/form-data" action="delete/{{cliente.id}}/">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger" style="margin-left:63%;">Excluir</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'voltarMorador' %}" class="btn btn-info">Voltar</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

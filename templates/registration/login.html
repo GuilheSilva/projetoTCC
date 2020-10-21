@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Pagina de login {% endblock %}
+
+{% block main %}
+
+   <div class="page login-page">
+      <div class="container" style="margin-left:10%;">
+        <div class="form-outer text-center d-flex align-items-center">
+          <div class="form-inner">
+            <div class="logo text-uppercase"><span>Sistema</span><strong class="" style="color: black;">Condado</strong></div>
+                <form method="post" class="text-left">
+                    {% csrf_token %}
+                    {{ form|bootstrap }}
+                    <button type="submit" class="btn btn-info" style="margin-left:40%;">Login</button>
+                    <a href="{% url 'password_reset' %}" class="forgot-pass" style="margin-left:35%;margin-top:5%;">Esqueceu sua senha?</a>
+                    <small style="margin-left:20%;">Não possui uma conta? </small>
+                        <a href="register.html" class="signup">Signup</a>
+
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Desenvolvimento web Sistema Condado</span>
+      </div>
+    </footer>
+{% endblock %}
+
+
+

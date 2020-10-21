@@ -1,0 +1,16 @@
+{% block documento%}
+
+<form method="POST" enctype="multipart/form-data" action="{{ contratos.numcontrato}}/documento">
+    {% csrf_token %}
+    <div class="input-group">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" name="documento" accept="image/*" id="id_documento">
+            <label class="custom-file-label" for="id_documento">Insira o documento</label>
+        </div>
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Inserir</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
+

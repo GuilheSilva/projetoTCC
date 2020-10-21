@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Settings{% endblock %}
+
+
+{% block form %}
+
+    <div class="listagemGeral">
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-2">
+                    {% if user.is_authenticated %}
+                    <label class="control-label  " for="id_nome">Usuario*</label>
+                    <div class=" ">
+                        <input type="text" name="nome" maxlength="50" class=" form-control"
+                               value="{{ user.username }}"  readonly="True">
+                    </div>
+                    {% endif%}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{form.nome|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{form.identidade|as_crispy_field}}
+                </div>
+                <div class="col-md-3">
+                    {{form.cpf|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{form.natural|as_crispy_field}}
+                </div>
+                <div class="col-md-3">
+                    {{form.estadocivil|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{form.profissao|as_crispy_field}}
+                </div>
+                <div class="col-md-3">
+                    {{form.telefone|as_crispy_field}}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Alterar</button>
+        </form>
+    </div>
+
+{% endblock %}
+
+

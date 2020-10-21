@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Pagina de login {% endblock %}
+
+{% block main %}
+
+   <div class="page login-page">
+      <div class="container" style="margin-left:14%;margin-top:0%">
+        <div class="form-outer  d-flex align-items-center">
+          <div class="form-inner">
+            <div class="logo text-uppercase"><span>Sistema</span><strong class="" style="color: black;">Condado</strong></div>
+
+              <form action="autenticacao_user" method="POST">
+                  {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Login:</label>
+                    <input type="username" class="form-control" placeholder="Enter Login" id="username"
+                           name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" placeholder="Enter password"
+                           id="password" name="password">
+                </div>
+                   {% for message in messages %}
+                      <div class="alert alert-danger">
+                          <strong>Error!</strong>{{ message }}
+                      </div>
+                  {% endfor %}
+                   <button type="submit" class="btn btn-info" style="margin-left:40%;">Login</button>
+                    <a href="" class="forgot-pass" style="margin-left:35%;margin-top:5%;">esqueceu a senha?</a>
+                    <small style="margin-left:20%;">Não possui uma conta? </small>
+                       <!-- <a href="{% url 'signup' %}" class="signup">Signup</a>-->
+                </form>
+          </div>
+        </div>
+      </div>
+   </div>
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Desenvolvimento web com Django 2.x</span>
+      </div>
+    </footer>
+{% endblock %}
+
+
+

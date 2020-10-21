@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Deletar Morador{% endblock %}
+
+{% block sistema %}
+
+     {% block menu %}
+          {% include 'home/menu.html' %}
+       {% endblock %}
+    <div class="page">
+      <!-- navbar-->
+        {% block header %}
+          {% include 'home/header.html' %}
+       {% endblock %}
+      <!-- Counts Section -->
+
+    <h1>Tem certeza que deseja deletar {{ docs.nome }} </h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+
+{% endblock %}
+
+

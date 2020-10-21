@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e72a04e0-089a-4d40-8b90-4233fcc36ebf" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1i4Iw52M4zbzK8jrfrXfoUMbZxe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/statics/js" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\statics\js" />
+      <recent name="C:\Users\Giovanne\OneDrive\TCC\condadoTCC\condado\condado\despesas\templates\despesas" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\statics\css" />
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\statics\js" />
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\statics\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e72a04e0-089a-4d40-8b90-4233fcc36ebf" name="Default Changelist" comment="" />
+      <created>1601160672533</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601160672533</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1472" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601316127811">
+      <screen x="1280" y="23" width="1920" height="1014" />
+    </state>
+    <state x="-1229" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601164481240" />
+    <state x="128" y="47" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.734/1280.23.1920.1057@0.23.1280.734" timestamp="1601291320671" />
+    <state x="1472" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777/1280.23.1920.1014@1280.23.1920.1014" timestamp="1601316127811" />
+    <state x="-927" y="267" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601165061626">
+      <screen x="-1366" y="96" width="1366" height="738" />
+    </state>
+    <state x="-927" y="267" key="#com.intellij.fileTypes.FileTypeChooser/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601165061626" />
+    <state x="-953" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601833873153">
+      <screen x="-1366" y="96" width="1366" height="738" />
+    </state>
+    <state x="-953" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601833873153" />
+    <state x="417" y="238" key="FileChooserDialogImpl" timestamp="1602270090874">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-949" y="344" key="FileChooserDialogImpl/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601333728260" />
+    <state x="417" y="238" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1602270090874" />
+    <state x="391" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601939511957" />
+    <state x="185" y="14" key="SettingsEditor" timestamp="1601860363494">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1182" y="110" key="SettingsEditor/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601333731203" />
+    <state x="185" y="14" key="SettingsEditor/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1601860363494" />
+    <state x="173" y="38" key="SettingsEditor/0.23.1280.777/1280.23.1920.1014@0.23.1280.777" timestamp="1601326253842" />
+    <state x="1539" y="42" key="SettingsEditor/0.23.1280.777/1280.23.1920.1014@1280.23.1920.1014" timestamp="1601317248969" />
+    <state x="540" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1601982511943">
+      <screen x="48" y="23" width="1232" height="777" />
+    </state>
+    <state x="2046" y="323" key="com.intellij.ide.util.TipDialog/0.23.1280.777/1280.23.1920.1014@1280.23.1920.1014" timestamp="1601313998917" />
+    <state x="540" y="253" key="com.intellij.ide.util.TipDialog/48.23.1232.777/1280.23.1920.1057@48.23.1232.777" timestamp="1601982511943" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602970315129">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1020" y="146" width="672" height="688" key="search.everywhere.popup/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601417029573" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1602970315129" />
+  </component>
+</project>

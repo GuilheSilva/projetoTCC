@@ -1,0 +1,43 @@
+{% extends "account/base.html" %}
+{% load bootstrap %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block main %}
+<div class="page login-page">
+    <div class="container" style="margin-left:10%;">
+        <div class="form-outer text-center d-flex align-items-center">
+            <div class="form-inner">
+                <div class="logo text-uppercase">
+                    <span>Sistema</span><strong class="" style="color: black;">Condado</strong>
+                </div>
+                {% if messages %}
+                    {% for m in messages %}
+                        <div class="alert alert-warning" role="alert">
+                            {{m}}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <form class="login" method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form|bootstrap }}
+                    <button type="submit" class="btn btn-info" style="margin-left:0%;">Login</button>
+                </form>
+                <a href="{% url 'account_reset_password' %}" class="forgot-pass"
+                   style="margin-left:0%;margin-top:5%;">Esqueceu sua senha?</a>
+                <small style="margin-left:0%;">Não possui uma conta? </small>
+                <a href="{{ signup_url }}" class="signup">Signup</a>
+                <div class="socialaccount_ballot">
+                    {% get_providers as socialaccount_providers %}
+                    <ul class="socialaccount_providers">
+                        <a href="" class="material-icons">
+                            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

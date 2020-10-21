@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Lista de Despesas{% endblock %}
+
+{% block sistema %}
+
+{% block menu %}
+{% include 'home/menu.html' %}
+{% endblock %}
+<div class="page">
+    <!-- navbar-->
+    {% block header %}
+    {% include 'home/header.html' %}
+    {% endblock %}
+
+      <div class="col-lg-12" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-body">
+                <div class="listagemGeral">
+                    <hr>
+                    <h3 style="margin-left:37%;">Lista de despesas</h3>
+                    <hr>
+                <!--                    <input class="u-full-width" type="text" placeholder="Localizar..." name="search_box">-->
+
+<!--                <a href="{% url 'import' %}">-->
+<!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
+
+                <table class="table table-responsive-lg table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Imovel</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Observação</th>
+                        <th scope="col">Opções</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for despesas in despesa %}
+                    <tr>
+                        <td><a>{{despesas.imoveis}}</a></td>
+                        <td><a>{{despesas.tipo}}</a></td>
+                        <td><a>{{despesas.valor}}</a></td>
+                        <td><a>{{despesas.data}}</a></td>
+                        <td><a>{{despesas.observacao}}</a></td>
+                        <td>
+                            <a href="{% url 'despesas_edit' despesas.id %}"
+                               class="material-icons" style="font-size:23px">edit
+                            </a>
+                            <a href="{% url 'despesas_edit' despesas.id %}"
+                               class="material-icons"
+                               style="font-size:23px;color:red">
+                                cancel</a>
+                            <!-- The Modal -->
+                        </td>
+                        {% empty %}
+                        <li>Desculpe, não existe nenhum "Imovel" cadastrado.</li>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+<!--                <div class="pagination">-->
+<!--                    <span class="step-links">-->
+<!--                        {% if posts.has_previous %}-->
+<!--                            <a href="?page={{ posts.previous_page_number }}">Anterior</a>-->
+<!--                        {% endif %}-->
+<!--        -->
+<!--                        <span class="current">-->
+<!--                            {{ posts.number }} de {{ posts.paginator.num_pages }}-->
+<!--                        </span>-->
+<!--        -->
+<!--                        {% if posts.has_next %}-->
+<!--                            <a href="?page={{ posts.next_page_number }}">Próxima</a>-->
+<!--                        {% endif %}-->
+<!--                    </span>-->
+<!--                </div>-->
+                <br>
+                <hr>
+<!--                <a href="{% url 'realEstate_add' %}" class="btn btn-primary"> Adicionar Imovel</a>-->
+
+                {% block footer %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Lista de moradores{% endblock %}
+
+{% block sistema %}
+
+{% block menu %}
+{% include 'home/menu.html' %}
+{% endblock %}
+<div class="page">
+    <!-- navbar-->
+    {% block header %}
+    {% include 'home/header.html' %}
+    {% endblock %}
+    <!-- Counts Section -->
+    <div class="col-lg-12" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-body">
+                <div class="listagemGeral">
+                    <hr>
+                    <h3 style="margin-left:37%;">Historico de contratos</h3>
+                    <hr>
+                <table class="table table-responsive-lg table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Contrato</th>
+                        <th scope="col">Data entrada</th>
+                        <th scope="col">Vencimento</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Imovel</th>
+                        <th scope="col">Morador</th>
+                        <th scope="col">Aluguel</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for historicos in historico %}
+                    <tr>
+                        <td><a>{{historicos.numcontrato}}</a></td>
+                        <td><a>{{historicos.data_entrada}}</a></td>
+                        <td><a>{{historicos.vencimento}}</a></td>
+                        <td><a>{{historicos.status}}</a></td>
+                        <td><a>{{historicos.imovel}}</a></td>
+                        <td><a>{{historicos.morador}}</a></td>
+
+                        <td><a>{{historicos.aluguel}}</a></td>
+                        {% empty %}
+                        <li>Desculpe, não existe nenhum "Historico " cadastrado.</li>
+                    </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <br>
+                <hr>
+                    <h3>Quantidade: {{qtd}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

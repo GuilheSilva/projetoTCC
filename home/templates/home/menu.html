@@ -1,0 +1,59 @@
+{% block menu %}
+{% load static %}
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+            <!-- User Info-->
+            <div class="sidenav-header-inner text-center">
+                <h5>Bem vindo(a)</h5>
+                <h2 class="h5">
+                    {% if user.is_authenticated %}
+                    {{ user.username }}
+                    {% endif %}
+
+            </div>
+            <!-- Small Brand information, appears on minimized sidebar-->
+            <div class="sidenav-header-logo">
+                <a href="" class="brand-small text-center">
+                    <strong>B</strong>
+                    <strong class="text-primary">D</strong></a>
+            </div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+            <h5 class="sidenav-heading">Menu</h5>
+            <ul id="side-main-menu" class="side-menu list-unstyled">
+                <li><a href="{% url 'sistema' %}"> <i class="icon-home"></i>Dashbords</a></li>
+
+                <li><a href="{% url 'listagem_contratos' %}"> <i class="icon-grid"></i>Contratos</a></li>
+                <li><a href="#exampledropdownDropdown1" aria-expanded="false" data-toggle="collapse">
+                    <i class="icon-interface-windows"></i>Despesas
+                </a>
+                    <ul id="exampledropdownDropdown1" class="collapse list-unstyled ">
+                        <li><a href="{% url 'despesas' %}">Nova Despesa</a></li>
+                        <li><a href="{% url 'despesas_list' %}">Lista de Despesas</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="{% url 'realEstate_listing' %}"><i class="icon-form"></i>Imoveis</a></li>
+                <li><a href="{% url 'lista_moradores' %}"> <i class="fa fa-bar-chart"></i>Moradores</a></li>
+                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">
+                    <i class="icon-interface-windows"></i>Relatorios
+                </a>
+                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                        <li><a href="{% url 'relatorio_contratos' %}" >Contratos</a></li>
+                        <li><a  href="{% url 'relatorio_despesas' %}">Despesas</a></li>
+                        <li><a href="{% url 'relatorio_geral' %}">Relatório Geral</a>l</li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'historico' %}"> <i class="icon-interface-windows"></i>Hístorico</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+{% endblock %}

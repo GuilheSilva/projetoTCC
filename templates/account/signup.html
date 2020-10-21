@@ -1,0 +1,24 @@
+{% extends "account/base.html" %}
+{% load bootstrap %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block main %}
+<div class="page login-page">
+    <div class="container" style="width: 500px;">
+        <div class="form-outer text-center d-flex align-items-center">
+            <div class="form-inner">
+                <div class="logo text-uppercase">
+                    <span>Sistema</span><strong class="" style="color: black;">Condado</strong>
+                </div>
+                {% block signup%}
+                {% include 'proprietario/signup.html'%}
+                {% endblock %}
+                <small style="margin-left:0%;">Possui uma conta? </small>
+                <a href="/accounts/login/" class="signup">Logar</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

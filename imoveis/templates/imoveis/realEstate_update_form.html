@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Atualizar{% endblock %}
+
+{% block sistema %}
+
+{% block menu %}
+{% include 'home/menu.html' %}
+{% endblock %}
+<div class="page">
+    <!-- navbar-->
+    {% block header %}
+    {% include 'home/header.html' %}
+    {% endblock %}
+    <!-- Counts Section -->
+
+    <div class="col-lg-12" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-body">
+                <div class="listagemGeral">
+                    <hr>
+                    <h3 style="margin-left:37%;">Alteração de Imovel</h3>
+                    <hr>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.status|bootstrap }}
+                        {{ form.fins|bootstrap }}
+                        <div class="form-group">
+                            <label>Cep</label>
+                            <div class=" ">
+                                <input name="cep" type="text" id="cep" class="form-control" value="" size="10"
+                                       maxlength="9" onblur="pesquisacep(this.value);"
+                                       onkeypress="$(this).mask('00.000-000')"/>
+                            </div>
+                        </div>
+
+                        {{ form.endereco|bootstrap }}
+                        {{ form.numero|bootstrap }}
+                        {{ form.complemento|bootstrap }}
+                        {{ form.bairro|bootstrap }}
+                        {{ form.cidade|bootstrap }}
+                        {{ form.estado|bootstrap }}
+                        {{ form.garagem|bootstrap }}
+                        {{ form.quartos|bootstrap }}
+                        {{ form.banheiros|bootstrap }}
+                        <div class="form-group col-md-6">
+                            <label for="id_ibge" style="display:none">ibge:</label>
+                            <div class=" ">
+                                <input style="display:none" name="ibge" type="text" id="id_ibge" size="40"
+                                       class="form-control">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

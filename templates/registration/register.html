@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% load crispy_forms_tags %}
+{% block title %} Pagina de login {% endblock %}
+
+{% block main %}
+     <div class="page login-page">
+      <div class="container">
+        <div class="form-outer text-center d-flex align-items-center">
+          <div class="form-inner">
+            <div class="logo text-uppercase"><span>Sistema</span><strong class="" style="color: black;">Condado</strong></div>
+                <p>Bem vindo ao sistema de gerenciamento de imóveis de pessoa física.</p>
+                <form method="post" class="text-left form-validate">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                  <button type="submit" class="btn btn-info" style="margin-left:40%;">Registrar</button>
+                </form>
+              <small>Já tem cadastro? </small>
+              <a href="{% url 'login' %}" class="signup">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

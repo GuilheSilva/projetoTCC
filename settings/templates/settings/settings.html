@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Lista de moradores{% endblock %}
+
+{% block sistema %}
+
+{% block menu %}
+{% include 'home/menu.html' %}
+{% endblock %}
+<div class="page">
+    <!-- navbar-->
+    {% block header %}
+    {% include 'home/header.html' %}
+    {% endblock %}
+    <!-- Counts Section -->
+    <!-- Nav tabs -->
+    <div class="col-lg-12" style="margin-top:20px;">
+        <div class="card">
+          <div class="card-body">
+                <div class="container">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapsefour">
+                                    Dados do Proprietario
+                                </a>
+                            </div>
+                            <div id="collapsefour" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <!--                                    <div class="input-group">-->
+                                    {% block dadosproprietario %}
+                                    {% include 'settings/dadosProprietario.html' %}
+                                    {% endblock %}
+                                    <!--                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                    Import / Export
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+
+                                    {% block importImoveis %}
+                                    {% include 'settings/importImoveis.html' %}
+                                    {% endblock %}
+                                    <br>
+                                    {% block importMorador %}
+                                    {% include 'settings/importMorador.html' %}
+                                    {% endblock %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                    Collapsible Group Item #3
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
