@@ -106,9 +106,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'condado',
         'USER': 'root',
-        'PASSWORD': 'chaves2508@@',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PASSWORD': '000',
+        'HOST': '0000',
+        'PORT': '000',
     }
 }
 
@@ -171,7 +171,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticsfiles')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'sistemacondado@gmail.com'
-EMAIL_HOST_PASSWORD = 'chaves2508'
+EMAIL_HOST_USER = 'seu email'
+EMAIL_HOST_PASSWORD = 'suasenha'
 EMAIL_USE_TLS = True
 
