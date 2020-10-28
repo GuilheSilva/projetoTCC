@@ -15,7 +15,7 @@ def home(request):
         return render(request, 'home/home.html')
 
     else:
-        ultimo_id = User.objects.create_user(username='condado', email='sistemacondado@gmail.com', password='chaves2508').id
+        ultimo_id = User.objects.create_user(username='nome do seu sistema', email='sistemacondado@gmail.com', password='sua senha').id
 
         proprietarios.objects.create(nome='master', identidade='111111111', cpf='22222222222', telefone='33333333333',
                                      endereco='endereco', numero='numero', bairro='bairro', cidade='cidade',
