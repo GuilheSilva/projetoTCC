@@ -13,6 +13,20 @@ import xlrd
 def settings(request):
     #dados = proprietarios.objects.filter(userid=request.user.id)
     dados = proprietarios.objects.get(userid=request.user.id)
+
+    if request.method == 'POST':
+        proprietarios.objects.filter(userid=request.user.id).update(nome=request.POST['nome'],
+                                                                    identidade=request.POST['identidade'],
+                                                                    cpf=request.POST['cpf'],
+                                                                    cep=request.POST['cep'],
+                                                                    telefone=request.POST['telefone'],
+                                                                    endereco=request.POST['endereco'],
+                                                                    numero=request.POST['numero'],
+                                                                    bairro=request.POST['bairro'],
+                                                                    cidade=request.POST['cidade'],
+                                                                    estado=request.POST['estado'])
+        #dados = proprietarios.objects.get(userid=request.user.id)
+        return redirect('settings')
    # print('teste', dados)
     #filename = importForm(request.POST or None)
     return render(request, 'settings/settings.html', context={'dados': dados})
@@ -35,9 +49,13 @@ def update_proprietario(request):
 def dados_proprietario(request):
     dados = proprietarios.objects.filter(userid=request.user.id)
     print('batata', dados)
+
+
+    if request.method == 'POST':
+        print('batata frita eh top')
     return render(request, 'settings/dadosProprietario.html', {'dados': dados})
 
-    return render(request, 'imoveis/realEstate_form.html', {'form': form})
+    #return render(request, 'imoveis/realEstate_form.html', {'form': form})
 
 # Aqui gera a  importação do excel ou csv se caso o cliente utilize dessa maneira para controlar
 # os seus alugueis.
@@ -69,7 +87,7 @@ def import_imoveis(request):
     files.delete(file.name)
     # por enquando vai mostrar para a lista do imovel
     posts = Imovel.objects.filter(userid=request.user.id)
-    files.close()
+  
     return render(request, 'imoveis/imoveis_detail.html', {'posts': posts})
     #return render(request, 'settings/importImoveis.html', {'file': file})
 

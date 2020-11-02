@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block title %}Atualizar{% endblock %}
+{% block title %}Contrato   {% endblock %}
 
 {% block sistema %}
 
@@ -18,11 +18,11 @@
     <div class="col-lg-12" style="margin-top:20px;">
         <div class="card">
             <div class="card-body">
-                <div class="listagemGeral">
+                <div class="">
                     <hr>
                     <h3 style="margin-left:37%;">Novo contrato</h3>
                     <hr>
-                    <form method="POST" enctype="multipart/form-data" style="padding: 2% 0% 2% 10%">
+                    <form method="POST" enctype="multipart/form-data" style="padding:2%;">
                         {% csrf_token %}
                         <!-- <div class="row">
                              <div class="col-md-2">
@@ -32,7 +32,7 @@
                              </div>
                          </div>-->
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <div id="div_id_numcontrato" class="form-group">
                                     <label for="id_numcontrato" class=" requiredField">
                                         Numcontrato<span class="asteriskField">*</span>
@@ -47,23 +47,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 {{ form.aluguel|as_crispy_field }}
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 {{ form.status|as_crispy_field }}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                {{ form.imovel|as_crispy_field }}
-                            </div>
-                            <div class="col-4">
-                                {{ form.morador|as_crispy_field }}
-                            </div>
+
+                        <div class="form-group">
+                            {{ form.imovel|as_crispy_field }}
                         </div>
+                        <div class="form-group">
+                            {{ form.morador|as_crispy_field }}
+                        </div>
+
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-5">
                                 <div id="div_id_data_entrada" class="form-group">
                                     <label for="id_data_entrada" class=" requiredField">
                                         Data entrada<span class="asteriskField">*</span>
@@ -84,13 +84,14 @@
                                     <div class="">
                                         <input type="number" name="vigencia" class="numberinput form-control "
                                                required
-                                               value="{{ vigencia }}" id="id_vigencia">
+                                               value="{{ vigencia }}" id="id_vigencia"
+                                               onblur="calculaData(this.value);">
                                         <p id="error_1_id_vigencia" class="invalid-feedback">
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-5">
                                 <div id="div_id_vencimento" class="form-group">
                                     <label for="id_vencimento" class=" requiredField">
                                         Vencimento<span class="asteriskField">*</span>
@@ -112,6 +113,9 @@
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}
 

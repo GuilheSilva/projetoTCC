@@ -1,0 +1,86 @@
+{% block dadosproprietario2 %}
+{% load static %}
+
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label>Nome:</label>
+        <input type="text" name="nome" id="nome" class="form-control" value="{{dados.nome}}" >
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Identidade: </label>
+            <input type="text" name="identidade" class="form-control" id="identidade"
+                   value="{{dados.identidade}}" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCPF">CPF: </label>
+            <input type="text" name="cpf" class="form-control" id="inputCPF"
+                   value="{{dados.cpf}}" >
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Username: </label>
+            <input type="text" name="identidade" class="form-control"
+                   value="{{user.username}}" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCPF">Password: </label>
+            <input type="password" class="form-control" value="{{user.password}}" >
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="text" name="email" class="form-control" value="{{user.email}}" >
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>CEP</label>
+            <input type="text" name="cep" class="form-control"
+                   id="inputcep" value="{{dados.cep}}" >
+        </div>
+        <div class="form-group col-md-6">
+            <label>Telefone:</label>
+            <input type="text" name="telefone" class="form-control"
+                   id="telefone" value="{{dados.telefone}}" >
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Endereço:</label>
+        <input type="text" name="endereco" class="form-control"
+               id="endereco" value="{{dados.endereco}}" >
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>numero:</label>
+            <input type="text" name="numero" class="form-control"
+                   id="inputnumero" value="{{dados.numero}}" >
+        </div>
+        <div class="form-group col-md-6">
+            <label>Bairro:</label>
+            <input type="text" name="bairro" class="form-control"
+                   id="bairro" value="{{dados.bairro}}" >
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Cidade:</label>
+            <input type="text" name="cidade" class="form-control"
+                   id="cidade" value="{{dados.cidade}}" >
+        </div>
+        <div class="form-group col-md-6">
+            <label>Estado:</label>
+            <input type="text" name="estado" class="form-control"
+                   id="estado" value="{{dados.estado}}" >
+        </div>
+
+    </div>
+    <hr>
+    <button type="submit" class="btn btn-primary" id="alterar" >alterar</button>
+</form>
+{% endblock %}

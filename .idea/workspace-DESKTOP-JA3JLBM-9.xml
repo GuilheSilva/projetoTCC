@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="978f7d0a-a40a-4f2d-9e97-d296933ccca4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/relatorio/templates/relatorio/gerar_relatorio_contrato.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0002_auto_20200926_2240.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0003_auto_20200926_2313.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0004_auto_20200926_2314.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0005_auto_20200926_2323.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0006_auto_20200926_2323.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0007_auto_20200926_2324.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0008_auto_20200926_2327.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0009_auto_20200926_2355.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0010_auto_20200926_2356.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0011_auto_20200926_2356.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0012_auto_20200927_0008.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0013_auto_20200927_0009.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0014_auto_20200927_0010.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0015_auto_20200927_0015.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0016_auto_20200927_2308.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0017_auto_20200928_1917.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0018_auto_20200928_2001.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0019_auto_20200929_2142.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0020_auto_20200929_2147.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0021_auto_20200929_2150.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0022_auto_20200929_2151.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0023_auto_20200930_2014.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0024_auto_20200930_2148.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0025_auto_20201001_1946.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0026_auto_20201009_1807.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0027_auto_20201009_1811.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0028_auto_20201009_1814.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0029_auto_20201009_1817.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0030_auto_20201009_1918.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0031_auto_20201009_2059.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0032_auto_20201009_2102.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0033_auto_20201009_2112.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0034_auto_20201010_1631.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0035_auto_20201011_2315.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0036_auto_20201011_2321.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0037_auto_20201011_2327.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0038_auto_20201012_0151.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0039_auto_20201012_1425.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0039_auto_20201013_1950.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0040_merge_20201013_2142.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0041_auto_20201017_1827.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0042_auto_20201017_1953.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0043_auto_20201017_2222.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0044_auto_20201017_2227.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0045_auto_20201017_2230.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0046_auto_20201017_2247.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0047_auto_20201017_2253.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0048_auto_20201017_2313.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0049_auto_20201017_2321.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0050_auto_20201018_2002.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0051_auto_20201018_2155.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/migrations/0052_auto_20201018_2213.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/templates/confirmacao_de_encerramento.html" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/templates/confirmacao_de_encerramento.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/templates/contratoDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/templates/contratoDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/templates/contratos.html" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/templates/contratos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/templates/contratos_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/templates/contratos_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/templates/documentoView.html" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/templates/documentoView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/templates/photo_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/templates/photo_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contratos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contratos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/despesas/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/despesas/migrations/0002_auto_20200927_2308.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/despesas/templates/despesas/despesas_form-DESKTOP-JA3JLBM.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/despesas/templates/despesas/despesas_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/despesas/templates/despesas/despesas_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/despesas/templates/despesas/despesas_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/despesas/templates/despesas/despesas_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/despesas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/despesas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/despesas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/despesas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historico/templates/historico.html" beforeDir="false" afterPath="$PROJECT_DIR$/historico/templates/historico.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historico/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/historico/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historico/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/historico/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/sistema.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/sistema.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imoveis/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imoveis/migrations/0002_imovel_userid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imoveis/migrations/0003_importimoveis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imoveis/migrations/0004_delete_importimoveis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imoveis/migrations/0005_imovel_complemento.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imoveis/migrations/0006_imovel_cep.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Pasta1_hSL1jdB.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Pasta2_QqlLdTw.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Pasta2_q5C7fMq.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/Confraternização_2019-178.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia01_2ThzjN0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia01_CbIIf7J.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia01_J26oUSY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia01_pUurbAQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia02_4nnZoF6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/documentos/evidencia1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/imagens/evidencia0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/imagens/evidencia01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/imagens/evidencia2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moradores/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moradores/migrations/0002_moradores_userid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moradores/migrations/0003_auto_20200831_1436.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moradores/migrations/0004_auto_20200912_1345.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/migrations/0002_auto_20201009_2059.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/migrations/0003_auto_20201009_2112.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/migrations/0004_auto_20201010_1631.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/migrations/0005_auto_20201011_2315.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/migrations/0006_auto_20201011_2321.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/migrations/0007_auto_20201017_1953.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proprietario/templates/proprietario/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/proprietario/templates/proprietario/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/templates/relatorio/listar_contratos.html" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/templates/relatorio/listar_contratos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/templates/relatorio/listar_contratos_despesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/templates/relatorio/listar_contratos_despesas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/templates/relatorio/listar_despesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/templates/relatorio/listar_despesas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/templates/relatorio/relatorio_contratos_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/templates/relatorio/relatorio_contratos_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/templates/relatorio/relatorio_despesas_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/templates/relatorio/relatorio_despesas_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/templates/relatorio/relatorio_geral_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/templates/relatorio/relatorio_geral_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relatorio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/relatorio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/migrations/0002_auto_20200929_2142.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/css/geral.css" beforeDir="false" afterPath="$PROJECT_DIR$/statics/css/geral.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/statics/js/base.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1i4Iw52M4zbzK8jrfrXfoUMbZxe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/historico/templates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\historico\templates" />
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\contratos\templates" />
+      <recent name="C:\Users\Giovanne\OneDrive\TCC\condadoTCC\condado\condado\despesas\templates\despesas" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\statics\css" />
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\statics\js" />
+      <recent name="C:\Users\casa\OneDrive\TCC\condadoTCC\condado\condado\statics\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="978f7d0a-a40a-4f2d-9e97-d296933ccca4" name="Default Changelist" comment="" />
+      <created>1601160672533</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601160672533</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1472" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601316127811">
+      <screen x="1280" y="23" width="1920" height="1014" />
+    </state>
+    <state x="-1229" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601164481240" />
+    <state x="128" y="47" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.734/1280.23.1920.1057@0.23.1280.734" timestamp="1601291320671" />
+    <state x="1472" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777/1280.23.1920.1014@1280.23.1920.1014" timestamp="1601316127811" />
+    <state x="-927" y="267" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601165061626">
+      <screen x="-1366" y="96" width="1366" height="738" />
+    </state>
+    <state x="-927" y="267" key="#com.intellij.fileTypes.FileTypeChooser/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601165061626" />
+    <state x="-953" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601833873153">
+      <screen x="-1366" y="96" width="1366" height="738" />
+    </state>
+    <state x="-953" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601833873153" />
+    <state x="417" y="238" key="FileChooserDialogImpl" timestamp="1602270090874">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-949" y="344" key="FileChooserDialogImpl/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601333728260" />
+    <state x="417" y="238" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1602270090874" />
+    <state x="391" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601939511957" />
+    <state x="185" y="14" key="SettingsEditor" timestamp="1601860363494">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1182" y="110" key="SettingsEditor/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601333731203" />
+    <state x="185" y="14" key="SettingsEditor/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1601860363494" />
+    <state x="173" y="38" key="SettingsEditor/0.23.1280.777/1280.23.1920.1014@0.23.1280.777" timestamp="1601326253842" />
+    <state x="1539" y="42" key="SettingsEditor/0.23.1280.777/1280.23.1920.1014@1280.23.1920.1014" timestamp="1601317248969" />
+    <state x="540" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1601982511943">
+      <screen x="48" y="23" width="1232" height="777" />
+    </state>
+    <state x="2046" y="323" key="com.intellij.ide.util.TipDialog/0.23.1280.777/1280.23.1920.1014@1280.23.1920.1014" timestamp="1601313998917" />
+    <state x="540" y="253" key="com.intellij.ide.util.TipDialog/48.23.1232.777/1280.23.1920.1057@48.23.1232.777" timestamp="1601982511943" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602970315129">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1020" y="146" width="672" height="688" key="search.everywhere.popup/-1366.96.1366.738/0.0.1920.1050@-1366.96.1366.738" timestamp="1601417029573" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1602970315129" />
+  </component>
+</project>

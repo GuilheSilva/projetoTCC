@@ -4,20 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="no-cache">
     <title>{% block title %}{% endblock %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Bootstrap CSS-->
+
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="{% static 'css/fontastic.css' %}">
-    <!--  inserido   -->
-
-
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <!-- jQuery Circle-->
@@ -30,23 +29,17 @@
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <!--     inseridos manualmente -->
     <link rel="shortcut" href="{% static 'img/excel.png' %}">
-    <!-- css para listagem em geral -->
-    <link rel="stylesheet" href="{% static 'css/geral.css' %}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="{% static 'css/dashboards_cards.css' %}">
-    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">-->
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-    <!--pip install django-crispy-forms
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    -->
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <!--    fechamento dos inseridos -->
     <style>
+
       .form_owner {
         margin-left:0
       }
@@ -57,19 +50,23 @@
 
 
 
+
     </style>
+
 </head>
 <body>
 {% block main %}
 {% endblock %}
+{% block config %}
+{% endblock %}
+
 {% block sistema %}
 {% block content %}
 {% endblock %}
 {% endblock %}
-<!-- JavaScript files-->
-<script src="{% static 'js/locastyle.js' %}"></script>
-<!-- inserido -->
 
+<!-- JavaScript files-->
+</body>
 <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
 <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 <script src="{% static 'js/grasp_mobile_progress_circle-1.0.0.min.js' %}"></script>
@@ -78,19 +75,33 @@
 <script src="{% static 'vendor/jquery-validation/jquery.validate.min.js' %}"></script>
 <script src="{% static 'vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js' %}"></script>
 <script src="{% static 'js/charts-home.js' %}"></script>
+<!-- inserido novo charts-->
+<!--<script src="{% static 'js/pie-charts.js' %}"></script>-->
+<!--<script src="{% static 'js/pie-charts-min.js' %}"></script>-->
+<!--&lt;!&ndash; Main File&ndash;&gt;-->
+<script src="{% static 'js/front.js' %}"></script>
+
+<!--&lt;!&ndash; inserido manualmente &ndash;&gt;-->
 <script src="{% static 'js/buscaCep.js' %}"></script>
 <script src="{% static 'js/base.js' %}"></script>
-<!-- mascara-->
+
+<!--&lt;!&ndash; mascara &ndash;&gt;-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<!-- fim mascara -->
+<!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+<!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
 
-<!--fim mascara-->
+<!-- fim do inserido manualmente-->
+
+<script>
+
+    charts({{ativos}},{{encerrados}});
+    charts2({{manutencao}},{{agua}},{{eletricidade}},{{imposto}},{{outros}})
 
 
-<!-- Main File-->
-<script src="{% static 'js/front.js' %}"></script>
-</body>
 
+</script>
 </html>

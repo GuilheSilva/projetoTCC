@@ -31,40 +31,59 @@
                             {% csrf_token %}
                             <div class="form-row">
                                 <div class="form-group col-md-5">
-                                     <label class="control-label ">Data de entrada</label>
-                                     <input type="date" name="data1" class="form-control">
+                                    <label class="control-label ">Data de entrada</label>
+                                    <input type="date" name="data1" class="form-control" max="2050-12-31" required>
                                 </div>
 
                                 <div class="form-group col-md-5">
                                     <label class="control-label ">Data de saida</label>
-                                    <input type="date" name="data2" class="form-control">
+                                    <input type="date" name="data2" class="form-control" max="2050-12-31" required>
                                 </div>
                             </div>
-                             <br>
-                                <div class="col-md-5" style="margin-left:20%">
-                                    {{ form|bootstrap }}
+                            <br>
+                            <div class="col-md-5" style=" float: left;">
+                                {{ form|bootstrap }}
+                            </div>
+                            <div class="col-md-5" style=" float: left;">
+
+
+                                <div class="form-group">
+
+                                    <label class="control-label  " for="id_opções_contrato">Opções contrato</label>
+
+                                    <div class=" ">
+                                        <select name="opcoes_contrato" class=" form-control" id="id_opções_contrato">
+                                            <option value="ativo">Ativo</option>
+
+                                            <option value="encerrado">Encerrado</option>
+
+                                            <option value="todos">Todos</option>
+
+                                        </select>
+
+                                    </div>
+
                                 </div>
-                                <br>
+
+
+                            </div>
+                            <br>
                             <button type="submit" style="margin-left:35%" class="btn btn-primary">Enviar</button>
                         </form>
 
 
-
-
                     </div>
-                        {% if mostrar_lista %}
-                            {% block listContratos %}
-                            {% include 'relatorio/listar_contratos.html' %}
-                            {% endblock %}
-                        {% endif %}
-
-
+                    {% if mostrar_lista %}
+                    {% block listContratos %}
+                    {% include 'relatorio/listar_contratos.html' %}
+                    {% endblock %}
+                    {% endif %}
                 </div>
-
             </div>
         </div>
-
-
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}

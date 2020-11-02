@@ -1,7 +1,7 @@
 <style>
 
 .linha{
-    font-size:158%;
+    font-size:150%;
  }
 .titulo{
     margin-left: 530%;
@@ -11,13 +11,29 @@
  .negrito{
     font-size: 112%;
  }
+.assinatura1{
+    font-size: 150%;
+ }
+.assinatura2{
+    font-size: 150%;
+}
+p {
+font-size: 150%;
+
+}
+
+
+
+
+
+
 
 
 </style>
-<h3 class="titulo">Contrato de Locação de Imóvel   n° <b>{{Numcontrato}}</b></h3>
+<h3 class="titulo">Contrato de Locação de Imóvel n° <b>{{Numcontrato}}</b></h3>
 <p class="linha">
-    <b class="negrito">LOCADOR:</b> (nome do proprietario),ex(nacionalidade), (estadocivil), (profissão),
-    portador da cedula de identificação (RG). n° xxxxxxxxxx e CPF n° xxxxxxxxxxx.
+    <b class="negrito">LOCADOR:</b><b> {{nomeProprietario}}</b>, portador da cedula de
+    identificação (RG). n° <b>{{identidadeProprietario}}</b> e CPF n° <b>{{cpfProprietario}}</b>.
 </p>
 <p class="linha">
     <b class="negrito">LOCATÁRIO:</b> <b>{{Morador}}</b>, natural de <b>{{naturaldeMorador}}</b>,
@@ -31,7 +47,8 @@
 </p>
 <p class="linha">
     <b class="negrito">CLÁUSULA SEGUNDA:</b> O prazo da locação é <b>{{Vigencia}}</b> meses, iniciando-se em
-    <b>{{Entrada}}</b> com término em <b>{{Vencimento}}</b>, independentemente e aviso, notificação ou interpelação judicial ou mesmo
+    <b>{{Entrada}}</b> com término em <b>{{Vencimento}}</b>, independentemente e aviso, notificação ou interpelação
+    judicial ou mesmo
     extrajudicial.
 </p>
 <p class="linha">
@@ -57,5 +74,17 @@
     gastos e pagamentos decorrentes da mesma, correção por conta do
     mesmo.
     <b> o LOCATÁRIO</b> está obrigado a devolver o imóvel em perfeitas condições.
+</p>
+<p align="Center">{{cidadeProprietario}}, {{diaAtual}} de {{mesAtualExtenso}} de {{anoAtual}}</p>
+<br>
+<p class="assinatura1">
+    ______________________________________
+<p> Morador: {{Morador}}</p>
+</p>
+
+<p class="assinatura2">
+    ______________________________________
+<p>Proprietário: {{nomeProprietario}}</p>
+
 </p>
 

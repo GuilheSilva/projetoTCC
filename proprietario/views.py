@@ -39,6 +39,7 @@ def create_proprietario(request):
                                          endereco=endereco, numero=numero, bairro=bairro, cidade=cidade,
                                          cep=cep, estado=estado,userid=ultimo_id)
             messages.success(request, 'cadastro efetuado com sucesso.!')
+
             return redirect('login')
 
     else:

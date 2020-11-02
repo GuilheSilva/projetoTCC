@@ -15,6 +15,15 @@ def despesas_edit(request, id):
         return redirect('despesas_list')
     return render(request, 'despesas/despesas_form.html', {'despesa':form})
 
+@login_required
+def deletar_despesa(request, id):
+    despesas_delete = get_object_or_404(Despesas, pk=id)
+    print(despesas_delete)
+    #despesa = Despesas.objects.filter(userid=request.user.id)
+    if request.method == 'POST':
+        despesas_delete.delete()
+        return redirect('despesas_list')
+    return render(request, 'despesas/despesas_delete_confirm.html', {'despesa': despesas_delete})
 
 @login_required
 def despesas_new(request):
@@ -39,15 +48,19 @@ def despesas_new(request):
         form = despesasForm(request.POST or None)
         print(form['imoveis'])
         if form.is_valid():
-            tipo = form.cleaned_data['tipo']
+
+            tipo = str(form.cleaned_data['tipo'])
+            print(tipo)
             valor = form.cleaned_data['valor']
             data = form.cleaned_data['data']
             observacao = form.cleaned_data['observacao']
             imoveis = form.cleaned_data['imoveis']
+            nota = form.cleaned_data['nota_fiscal']
 
-
+            if nota == None:
+                nota = 0
             Despesas.objects.create(tipo=tipo, valor=valor, data=data, observacao=observacao, imoveis=imoveis,
-                                    userid=request.user.id)
+                                    userid=request.user.id, nota_fiscal=nota)
             return redirect('despesas_list')
         form.fields['imoveis'] = geeks_field
         return render(request, 'despesas/despesas_form.html', {'despesa':form})
@@ -56,6 +69,8 @@ def despesas_new(request):
 @login_required
 def despesas_list(request):
     despesa = Despesas.objects.filter(userid=request.user.id)
+    for i in despesa:
+        print(despesa)
     return render(request, 'despesas/despesas_list.html', {'despesa': despesa})
 
 

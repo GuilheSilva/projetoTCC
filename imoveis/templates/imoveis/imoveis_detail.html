@@ -24,7 +24,7 @@
 
                     <!--                <a href="{% url 'import' %}">-->
                     <!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
-
+                    {% if posts %}
                     <table class="table table-responsive-lg table-striped">
                         <thead>
                         <tr>
@@ -57,13 +57,15 @@
                                 >edit
                                 </a>
                                 <!--                                <div class="container">-->
-                                <a href="{% url 'realEstate_delete' Imoveis.id%}" data-toggle="modal" data-target="#myModal"
-                                   class="material-icons" style="font-size:23px;color:red">
-                                    cancel
+                                <a href="{% url 'realEstate_delete' Imoveis.id%}"
+                                   data-toggle="modal" data-target="#myModal4"
+                                   class="material-icons" style="font-size:23px;color:red"
+                                   data-toggle="tooltip" title="Deletar">
+                                    delete_forever
                                 </a>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal fade" id="myModal4" role="dialog">
                                     <div class="modal-dialog">
 
                                         <!-- Modal content-->
@@ -74,8 +76,8 @@
 
                                             </div>
                                             <div class="modal-body">
-                                                {% block testeDelete %}
-                                                {% include  'imoveis/realEstate_delete_confirm.html'%}
+                                                {% block deleteImoveis %}
+                                                {% include 'imoveis/realEstate_delete_confirm.html'%}
                                                 {% endblock %}
                                             </div>
                                             <div class="modal-footer">
@@ -88,21 +90,31 @@
                                 </div>
                             </td>
                             </td>
-                            {% empty %}
-                            <li>Desculpe, não existe nenhum "Imovel" cadastrado.</li>
+
                         </tr>
                         {% endfor %}
                         </tbody>
                     </table>
+                    {% else %}
+                    <li>Desculpe, não existe nenhum imóvel cadastrado.</li>
+                    {% endif %}
                     <br>
+                    {% if messages %}
+                    {% for m in messages %}
+                    <div class="alert alert-warning" role="alert">
+                        {{m}}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
                     <hr>
                     <a href="{% url 'realEstate_add' %}" class="btn btn-primary"> Adicionar Imovel</a>
-                    {% block footer %}
-                    {% endblock %}
                 </div>
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}
 

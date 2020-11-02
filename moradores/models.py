@@ -15,12 +15,12 @@ class moradores(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=200)
     identidade = models.CharField(max_length=15)
-    cpf = models.CharField(max_length=11)
+    cpf = models.CharField(max_length=15)
     natural = models.CharField(max_length=30)
     estadocivil = models.CharField(max_length=15, choices=ESTADOCIVIL_CHOICES)
     profissao = models.CharField(max_length=30)
     email = models.CharField(max_length=50)
-    telefone = models.CharField(max_length=11)
+    telefone = models.CharField(max_length=15)
     userid = models.IntegerField()
 
     # mostra os dados no dashboarder em home/sistema.html

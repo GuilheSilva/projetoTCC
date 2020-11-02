@@ -49,7 +49,7 @@
                             <label for="id_ibge" style="display:none">ibge:</label>
                             <div class=" ">
                                 <input style="display:none" name="ibge" type="text" id="id_ibge" size="40"
-                                       class="form-control" >
+                                       class="form-control">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Salvar</button>
@@ -58,6 +58,9 @@
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}
 

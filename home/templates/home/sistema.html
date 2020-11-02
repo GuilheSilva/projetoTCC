@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
 
+</head>
 <body>
-
 {% block sistema %}
-
 {% block menu %}
 {% include 'home/menu.html' %}
 {% endblock %}
@@ -23,149 +24,95 @@
                     <div class="container-fluid">
                         <div class="row">
                             <!-- Count item widget-->
-                            <div class="col-xl-2 col-md-4 col-6">
+                            <div class="col-xl-2 col-md-4 col-6" style="margin-left: 2%;">
                                 <div class="wrapper count-title d-flex">
                                     <div class="icon"><i class="icon-user"></i></div>
                                     <div class="name"><strong
-                                            class="text-uppercase">Imoveis cadastrados</strong><span>Last 7 days</span>
+                                            class="text-uppercase">Imoveis cadastrados</strong>
                                         <div class="count-number">{{ count_realState }}</div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Count item widget-->
-                            <div class="col-xl-2 col-md-4 col-6">
+                            <div class="col-xl-2 col-md-4 col-6" style="margin-left: 10%;">
                                 <div class="wrapper count-title d-flex">
                                     <div class="icon"><i class="icon-padnote"></i></div>
                                     <div class="name"><strong
-                                            class="text-uppercase">Moradores cadastrados</strong><span>Last 5 days</span>
+                                            class="text-uppercase">Moradores cadastrados</strong>
                                         <div class="count-number">{{ count_morador }}</div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Count item widget-->
-                            <div class="col-xl-2 col-md-4 col-6">
+                            <div class="col-xl-2 col-md-4 col-6" style="margin-left: 10%;">
                                 <div class="wrapper count-title d-flex">
                                     <div class="icon"><i class="icon-check"></i></div>
                                     <div class="name"><strong class="text-uppercase">Contratos
-                                        gerados</strong><span>fictício</span>
+                                        gerados</strong>
                                         <div class="count-number">{{count_contratos}}</div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Count item widget-->
-                            <div class="col-xl-2 col-md-4 col-6">
+                            <div class="col-xl-2 col-md-4 col-6" style="margin-left: 8%;">
                                 <div class="wrapper count-title d-flex">
-                                    <div class="icon"><i class="icon-bill"></i></div>
-                                    <div class="name"><strong class="text-uppercase">New
-                                        Invoices</strong><span>fictício</span>
-                                        <div class="count-number">123</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Count item widget-->
-                            <div class="col-xl-2 col-md-4 col-6">
-                                <div class="wrapper count-title d-flex">
-                                    <div class="icon"><i class="icon-list"></i></div>
-                                    <div class="name"><strong class="text-uppercase">Open
-                                        Cases</strong><span>fictício</span>
-                                        <div class="count-number">92</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Count item widget-->
-                            <div class="col-xl-2 col-md-4 col-6">
-                                <div class="wrapper count-title d-flex">
-                                    <div class="icon"><i class="icon-list-1"></i></div>
-                                    <div class="name"><strong class="text-uppercase">New
-                                        Cases</strong><span>fictício</span>
-                                        <div class="count-number">70</div>
+                                    <div class="icon"><i class="icon-check"></i></div>
+                                    <div class="name"><strong class="text-uppercase">Despesas Geradas
+                                    </strong>
+                                        <div class="count-number">{{count_despesas}}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 <!-- Header Section-->
                 <section class="dashboard-header section-padding">
                     <div class="container-fluid">
                         <div class="row d-flex align-items-md-stretch">
                             <!-- Pie Chart-->
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-6 col-md-6" style="margin-top: -30px;margin-left:-5px;">
                                 <div class="card project-progress">
-                                    <h2 class="display h4">Project Beta progress</h2>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <h2 class="display h4" style="margin-left:40%;margin-top:5%;">Contratos</h2>
                                     <div class="pie-chart">
                                         <canvas id="pieChart" width="300" height="300"></canvas>
+                                        <script type="application/javascript">
+                                                 charts({{ativos}},{{encerrados}});
+
+
+
+                                        </script>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Line Chart -->
-                            <div class="col-lg-6 col-md-12 flex-lg-last flex-md-first align-self-baseline">
-                                <div class="card sales-report">
-                                    <h2 class="display h4">Sales marketing report</h2>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet
-                                        officiis</p>
-                                    <div class="line-chart">
-                                        <canvas id="lineCahrt"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="statistics">
-                    <div class="container-fluid">
-                        <div class="row d-flex">
-                            <div class="col-lg-4">
-                                <!-- Income-->
-                                <div class="card income text-center">
-                                    <div class="icon"><i class="icon-line-chart"></i></div>
-                                    <div class="number">126,418</div>
-                                    <strong class="text-primary">All Income</strong>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <!-- Monthly Usage-->
-                                <div class="card data-usage">
-                                    <h2 class="display h4">Monthly Usage</h2>
-                                    <div class="row d-flex align-items-center">
-                                        <div class="col-sm-6">
-                                            <div id="progress-circle"
-                                                 class="d-flex align-items-center justify-content-center"></div>
-                                        </div>
-                                        <div class="col-sm-6"><strong class="text-primary">80.56 Gb</strong><small>Current
-                                            Plan</small><span>100 Gb Monthly</span></div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <!-- User Actibity-->
-                                <div class="card user-activity">
-                                    <h2 class="display h4">User Activity</h2>
-                                    <div class="number">210</div>
-                                    <h3 class="h4 display">Social Users</h3>
-                                    <div class="progress">
-                                        <div role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                             aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
-                                    </div>
-                                    <div class="page-statistics d-flex justify-content-between">
-                                        <div class="page-statistics-left"><span>Pages Visits</span><strong>230</strong>
-                                        </div>
-                                        <div class="page-statistics-right"><span>New Visits</span><strong>73.4%</strong>
-                                        </div>
+                            <div class="col-lg-6 col-md-6" style="margin-top: -30px;margin-left:4px;">
+                                <div class="card project-progress">
+                                    <h2 class="display h4" style="margin-left:40%;margin-top:5%;">Despesas</h2>
+                                    <div class="pie-chart">
+                                        <canvas id="pieChart2" width="400" height="400"></canvas>
+                                        <script type="application/javascript">
+                                                 charts2({{manutencao}},{{agua}},{{eletricidade}},{{imposto}},{{outro}});
+
+
+
+                                        </script>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {% endblock %}
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
+
 {% endblock %}
+
 </body>
 </html>

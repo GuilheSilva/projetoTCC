@@ -21,6 +21,8 @@
                     <h3 style="margin-left:37%;">Contratos</h3>
                     <hr>
                     <table class="table table-responsive-lg table-striped">
+
+                        {% if contratos %}
                         <thead>
                         <tr>
                             <th scope="col">Contrato</th>
@@ -28,7 +30,6 @@
                             <th scope="col">Data de entrada</th>
                             <th scope="col">Vigencia</th>
                             <th scope="col">Status</th>
-                            <th scope="col">data encerramento</th>
                             <th scope="col">Vencimento</th>
                             <th scope="col">Imovel</th>
                             <th scope="col">Morador</th>
@@ -40,13 +41,13 @@
 
                         {% for contrato in contratos %}
                         <tr>
-                            <td><a href="{% url 'detalhe_contrato' contrato.numcontrato%}">{{contrato.numcontrato}}</a>
+                            <td><a href="{% url 'detalhe_contrato' contrato.numcontrato%}"
+                                   data-toggle="tooltip" title="Dados do contrato">{{contrato.numcontrato}}</a>
                             </td>
                             <td><a>{{contrato.aluguel}}</a></td>
                             <td><a>{{contrato.data_entrada }}</a></td>
                             <td><a>{{contrato.vigencia}}</a></td>
                             <td><a>{{contrato.status}}</a></td>
-                            <td><a>data encerramento</a></td>
                             <td><a>{{contrato.vencimento}}</a></td>
                             <td><a>{{contrato.imovel}}</a></td>
                             <td><a>{{contrato.morador}}</a></td>
@@ -55,7 +56,8 @@
                                 {% if contrato.status != 'Encerrado' %}
                                 <a href="{% url 'encerramento' contrato.numcontrato%}"
                                    data-toggle="modal" data-target="#myModal"
-                                   class="material-icons" style="font-size:23px">check
+                                   title="Encerramento"
+                                   class="material-icons" style="font-size:23px;color:red">file_download
                                 </a>
                                 {% endif %}
                                 <div class="modal fade" id="myModal" role="dialog">
@@ -63,36 +65,59 @@
 
                                         <!-- Modal content-->
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;
-                                                </button>
 
-                                            </div>
                                             <div class="modal-body">
-                                                {% block testeDelete %}
+                                                {% block encerramento %}
                                                 {% include 'confirmacao_de_encerramento.html'%}
                                                 {% endblock %}
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                                    Close
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!--                                -->
-                                <a href="{% url 'printcontrato' contrato.numcontrato%}"
-                                   class="material-icons" style="font-size:23px">get_app
+                                <a href=""
+                                   data-toggle="modal" data-target="#myModal2"
+                                   title="Contrato" class="material-icons" style="font-size:23px"
+                                   title="Contrato">get_app
                                 </a>
+                                <div class="modal fade" id="myModal2" role="dialog">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close"
+                                                                data-dismiss="modal">&times;
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h5>Deseja gerar o PDF do contrato n°
+                                                            {{contrato.numcontrato}}?</h5>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a href="{% url 'printcontrato' contrato.numcontrato%}"
+                                                           class="btn btn-success">Sim
+                                                        </a>
+                                                        <a class="btn btn-danger" data-dismiss="modal">
+                                                            Não
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
-                            {% empty %}
-                            <li>Desculpe, não existe nenhum "Contrato" cadastrado.</li>
                         </tr>
-
                         {% endfor %}
                         </tbody>
+                        {% else %}
+
+                        <li>Desculpe, não existe nenhum "Contrato" cadastrado.</li>
+
+                        {% endif %}
                     </table>
                     <br>
                     <hr>
@@ -101,5 +126,8 @@
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}

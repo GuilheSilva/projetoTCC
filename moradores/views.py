@@ -1,3 +1,5 @@
+#from pyexpat.errors import messages
+from django.contrib import messages
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import moradores
@@ -23,7 +25,6 @@ def residents_new(request):
 def residents_update(request, id):
     cliente = get_object_or_404(moradores, pk=id)
     form = moradorForm(request.POST or None, instance=cliente)
-
     if form.is_valid():
         form.save()
         return redirect('lista_moradores')
@@ -32,9 +33,18 @@ def residents_update(request, id):
 @login_required()
 def residents_delete(request, id):
     cliente = get_object_or_404(moradores, pk=id)
+
+    storage = messages.get_messages(request)
+    storage.used = True
+
     if request.method == 'POST':
-        cliente.delete()
-        return redirect('lista_moradores')
+        try:
+            cliente.delete()
+        except Exception as e:
+            messages.error(request, f"Não foi possível excluir o morador {cliente}, pois ele faz parte de um contrato!")
+            return redirect('lista_moradores')
+    # else:
+    #   messages.error(request, 'Não é possivel deletar morador, está vinculado a um contrato.!')
     return render(request, 'moradores/morador_delete_confirm.html', {'cliente':cliente})
 
 @login_required()

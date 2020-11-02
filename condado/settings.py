@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'afd%$&dk@_c*rln9p+%hjji_9&sghtv8815_so&(kcma-=a6it'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -40,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrapform',
     'crispy_forms',
+    'clearcache',
 
     'allauth',
     'allauth.account',
@@ -56,8 +55,9 @@ INSTALLED_APPS = [
     'settings',
     'despesas',
     'proprietario',
+
 ]
-SITE_ID=1
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -88,15 +88,12 @@ TEMPLATES = [
     },
 ]
 
-
-
 WSGI_APPLICATION = 'condado.wsgi.application'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
-
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -112,7 +109,7 @@ DATABASES = {
     }
 }
 
-#DATE_INPUT_FORMATS = ['%d-%m-%Y']
+# DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -132,7 +129,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -146,7 +142,6 @@ USE_L10N = False
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -156,7 +151,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL = '/'
 
 LOGIN_REDIRECT_URL = 'sistema'
-
 
 STATICFILES_DIRS = [
     'statics',
@@ -168,10 +162,8 @@ STATICFILES_DIRS = (
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticsfiles')
 
-
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'sistemacondado@gmail.com'
 EMAIL_HOST_PASSWORD = 'chaves2508'
 EMAIL_USE_TLS = True
-

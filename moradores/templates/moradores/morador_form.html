@@ -26,7 +26,60 @@
                         <div class="row">
                             <div class="col-12">
                                 {% csrf_token %}
-                                {{ form|bootstrap }}
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                       value="TsPBpurPLi0ddTXtGli2HV5Acpxj8b1fkPKGtjE9ntRs89Yqn3stEZf79QPyXIzB">
+                                <div class="form-group">
+                                    <label class="control-label  " for="id_nome">Nome</label>
+                                    <div class=" ">
+                                        <input type="text" name="nome" maxlength="200" class=" form-control"
+                                               required id="id_nome">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label  " for="id_identidade">Identidade</label>
+                                    <div class=" ">
+                                        <input type="text" name="identidade" maxlength="15"
+                                               onkeypress="$(this).mask('00.000.000-0');"
+                                               class=" form-control" required id="id_identidade">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label  " for="id_cpf">Cpf</label>
+                                    <div class=" ">
+                                        <input type="text" name="cpf" maxlength="11" class=" form-control"
+                                               onkeypress="$(this).mask('000.000.000-00');" required id="id_cpf">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label  " for="id_natural">Natural</label>
+                                    <div class=" ">
+                                        <input type="text" name="natural" maxlength="30"
+                                               class=" form-control" required id="id_natural">
+                                    </div>
+                                </div>
+                                {{ form.estadocivil|bootstrap }}
+                                <div class="form-group">
+                                    <label class="control-label  " for="id_profissao">Profissao</label>
+                                    <div class=" ">
+                                        <input type="text" name="profissao" maxlength="30"
+                                               class=" form-control" required id="id_profissao">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label  " for="id_email">Email</label>
+                                    <div class=" ">
+                                        <input type="text" name="email" maxlength="50" class=" form-control"
+                                               required id="id_email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label  " for="id_telefone">Telefone</label>
+                                    <div class=" ">
+                                        <input type="text" name="telefone" maxlength="11"
+                                               onkeypress="$(this).mask('(00) 00000-0000')"
+                                               class=" form-control" required id="id_telefone">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Salvar</button>
@@ -35,6 +88,9 @@
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}
 

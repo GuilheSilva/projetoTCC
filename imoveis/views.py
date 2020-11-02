@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Imovel
 from .forms import ImoveisForm
+from django.contrib import messages
 import xlrd
 
 @login_required()
@@ -57,8 +58,11 @@ def realEstate_delete(request, id):
     realEstate = get_object_or_404(Imovel, pk=id)
 
     if request.method == 'POST':
-        realEstate.delete()
-        return redirect('realEstate_listing')
+        try:
+            realEstate.delete()
+        except Exception as e:
+            messages.error(request, f"Não foi possível excluir o imóvel {realEstate}, pois ele faz parte de um contrato!")
+            return redirect('realEstate_listing')
     return render(request, 'imoveis/realEstate_delete_confirm.html', {'realEstate': realEstate})
 
 

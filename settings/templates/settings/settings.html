@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Lista de moradores{% endblock %}
+{% block title %}Settings{% endblock %}
 
 {% block sistema %}
 
@@ -16,7 +16,7 @@
     <!-- Nav tabs -->
     <div class="col-lg-12" style="margin-top:20px;">
         <div class="card">
-          <div class="card-body">
+            <div class="card-body">
                 <div class="container">
                     <div id="accordion">
                         <div class="card">
@@ -32,6 +32,35 @@
                                     {% include 'settings/dadosProprietario.html' %}
                                     {% endblock %}
                                     <!--                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                    Notificações
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <br>
+                                    <h3>Notificações de E-mail</h3>
+                                    <hr>
+                                    <form>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="switch2">
+                                            <label class="custom-control-label" for="switch2">Notificação de novo
+                                                imoveis</label>
+                                        </div>
+                                    </form>
+                                    <form>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="switch3">
+                                            <label class="custom-control-label" for="switch3">Notificação de novo
+                                                Morador</label>
+                                        </div>
+                                    </form>
+                                    <hr>
                                 </div>
                             </div>
                         </div>
@@ -54,26 +83,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                                    Collapsible Group Item #3
-                                </a>
-                            </div>
-                            <div id="collapseThree" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}
 

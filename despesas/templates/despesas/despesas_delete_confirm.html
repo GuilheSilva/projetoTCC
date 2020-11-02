@@ -1,0 +1,23 @@
+{% block teste2Delete %}
+<div class="col-lg-12" style="margin-top:10px;">
+    <div class="card">
+        <div class="card-body">
+            <div class="listagemGeral">
+                <hr>
+                <h5 >Tem certeza que deseja excluir a despesa ? </h5>
+                <br>
+                <h6 >Imovel: {{despesas.imoveis}}</h6>
+                <h6 >Data: {{despesas.data}}</h6>
+                <hr>
+                <form method="POST" enctype="multipart/form-data" action="/despesas/delete/{{despesas.id}}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger" >Excluir</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'despesas_list' %}" class="btn btn-info">Voltar</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

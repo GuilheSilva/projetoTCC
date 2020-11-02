@@ -5,13 +5,15 @@
         <div class="card-body">
             <div class="listagemGeral">
                 <hr>
-                <h3 style="margin-left:37%;">Listagem de contratos</h3>
-                <p style="margin-left:85%;"><a href="{% url 'print_relatorio'  %}"> teste </a></p>
+                <h3 style="margin-left:37%;">Listagem de contratos
+                    {% if contratos %}
+                 <a href="{% url 'gerar_relatorio_contratos' data1 data2 imovel opcao %}"
+                       class="material-icons" style="font-size:20px;margin-left:30%;">file_download</a></h3>
+                {% else %}
+                </h3>
+                {% endif %}
                 <hr>
-                <!--                    <input class="u-full-width" type="text" placeholder="Localizar..." name="search_box">-->
 
-                <!--                <a href="{% url 'import' %}">-->
-                <!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
                 <table class="table table-responsive-lg table-striped">
                     <thead>
 
@@ -22,6 +24,7 @@
                         <th scope="col">Imovel</th>
                         <th scope="col">Morador</th>
                         <th scope="col">Aluguel</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Data de entrada</th>
                         <th scope="col">Vigência</th>
                         <th scope="col">Vencimento</th>
@@ -39,6 +42,7 @@
                         <td><a>{{contrato.imovel}}</a></td>
                         <td><a>{{contrato.morador}}</a></td>
                         <td><a>{{contrato.aluguel}}</a></td>
+                        <td><a>{{contrato.status}}</a></td>
                         <td><a>{{contrato.data_entrada}}</a></td>
                         <td><a>{{contrato.vigencia}}</a></td>
                         <td><a>{{contrato.vencimento}}</a></td>
@@ -53,7 +57,11 @@
 
                 <br>
                 {% if contratos %}
-                <p style="margin-left: 87%"><b>Total: R${{somaContratos}}</b></p>
+                <p style="margin-left: 65%"><b>Intervalo de meses: {{meses}}</b></p>
+                <p style="margin-left: 65%">Data inicial: {{data_de_entrada}} - Data final: {{data_de_saida}}</p>
+                <p style="margin-left: 65%"><b>Total: R${{somaContratos}}</b></p>
+
+
                 {% endif %}
                 <hr>
                 <br>

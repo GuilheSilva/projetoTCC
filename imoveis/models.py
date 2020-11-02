@@ -22,12 +22,10 @@ import datetime
 class Imovel(models.Model):
 
     STATUS_CHOICES = (
-        ("Alugado", "Alugado"),
-        ("Desocupado", "Desocupado"),
+       ("Desocupado", "Desocupado"),
     )
     FINS_CHOICES = (
         ("Aluguel","Aluguel"),
-        ("Venda","Venda"),
     )
 
     id = models.AutoField(primary_key=True)

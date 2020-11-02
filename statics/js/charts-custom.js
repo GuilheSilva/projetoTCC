@@ -71,13 +71,13 @@ $(document).ready(function () {
         type: 'doughnut',
         data: {
             labels: [
-                "First",
-                "Second",
-                "Third"
+                "Ativo",
+                "Encerrado",
+
             ],
             datasets: [
                 {
-                    data: [300, 50, 100],
+                    data: [100, 50, 100],
                     borderWidth: [1, 1, 1],
                     backgroundColor: [
                         brandPrimary,
@@ -171,7 +171,7 @@ $(document).ready(function () {
                 label: 'My dataset' // for legend
             }],
             labels: [
-                "First",
+                "Ativo",
                 "Second",
                 "Third"
             ]

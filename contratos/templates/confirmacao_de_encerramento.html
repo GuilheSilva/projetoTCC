@@ -1,21 +1,29 @@
-{% block testeDelete %}
-<div class="col-lg-12" style="margin-top:20px;">
+{% block encerramento %}
+<div class="col-lg-12" style="margin-top:10px;">
     <div class="card">
         <div class="card-body">
             <div class="listagemGeral">
                 <hr>
-                <h1 style="margin-left:10%;">Tem certeza que deseja encerrar este contrato n° {{numcontrato.numcontrato}} ?</h1>
                 <br>
-
+                <h6 >Tem certeza que deseja encerrar este contrato n°
+                    {{contrato.numcontrato}} ?</h6>
+                <br>
                 <hr>
-                <form method="POST" enctype="multipart/form-data" action="/contrato/encerramento/{{numcontrato.numcontrato}}">
+               <form method="POST" enctype="multipart/form-data"
+                      action="/contrato/encerramento/{{contrato.numcontrato}}">
                     {% csrf_token %}
-
-                    <button type="submit" class="btn btn-danger" style="margin-left:63%;">Encerrar</button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="{% url 'voltar' %}" class="btn btn-info">Voltar</a>
+                    <div class="form-check" style="margin-left:20%;">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="check"
+                                   class="form-check-input"
+                                   value='batata'>imprimir contrato de encerramento.
+                        </label>
+                    </div>
+                    <hr>
+                    <button  type="submit" class="btn btn-success">Sim
+                    </button>
+                    &nbsp;&nbsp; <a href="{% url 'voltar2' %}" class="btn btn-danger">Não</a>
                 </form>
-
             </div>
         </div>
     </div>

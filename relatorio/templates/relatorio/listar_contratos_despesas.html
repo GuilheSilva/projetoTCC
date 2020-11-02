@@ -1,75 +1,151 @@
 {% block listRelatorio %}
 
-      <div class="col-lg-12" style="margin-top:20px;">
-        <div class="card">
-            <div class="card-body">
-                <div class="listagemGeral">
-                    <hr>
-                    <h3 style="margin-left:37%;">Listagem de contratos</h3>
+<div class="col-lg-12" style="margin-top:20px;">
+    <br>
+    <hr>
 
-                    <hr>
+     {% if contratos or historico or despesas %}
+      <a href="{% url 'gerar_relatorio_geral' data1 data2 option%}"
+         class="material-icons" style="font-size:20px;margin-left:30%;">file_download
+                    </a>
+     {% endif %}
+
+     {% if contratos %}
+    <div class="card">
+        <div class="card-body">
+            <p style="margin-left:85%;"></p>
+            <div class="listagemGeral">
+                <hr>
+                <h3 style="margin-left:40%;">Listagem de contratos
+
+
+                </h3>
+
+                <hr>
                 <!--                    <input class="u-full-width" type="text" placeholder="Localizar..." name="search_box">-->
 
-<!--                <a href="{% url 'import' %}">-->
-<!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
+                <!--                <a href="{% url 'import' %}">-->
+                <!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
                 <table class="table table-responsive-lg table-striped">
-                        <thead>
+                    <thead>
 
 
-                        {% if contratos %}
-                        <tr>
-                            <th scope="col">Número do contrato</th>
-                            <th scope="col">Imovel</th>
-                            <th scope="col">Morador</th>
-                            <th scope="col">Aluguel</th>
-                            <th scope="col">Data de entrada</th>
-                            <th scope="col">Vigência</th>
-                            <th scope="col">Vencimento</th>
 
-                        </tr>
+                    <tr>
+                        <th scope="col">Número do contrato</th>
+                        <th scope="col">Imovel</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Morador</th>
+                        <th scope="col">Aluguel</th>
+                        <th scope="col">Data de entrada</th>
+                        <th scope="col">Vigência</th>
+                        <th scope="col">Vencimento</th>
 
-                        {% endif %}
-                        </thead>
+                    </tr>
 
 
-                        <tbody>
-                        {% for contrato in contratos %}
-                        <tr>
-                            <td><a>{{contrato.numcontrato}}</a></td>
-                            <td><a>{{contrato.imovel}}</a></td>
-                            <td><a>{{contrato.morador}}</a></td>
-                            <td><a>{{contrato.aluguel}}</a></td>
-                            <td><a>{{contrato.data_entrada}}</a></td>
-                            <td><a>{{contrato.vigencia}}</a></td>
-                            <td><a>{{contrato.vencimento}}</a></td>
+                    </thead>
 
-                            {% empty %}
-                            <li>Desculpe, não encontrei nada com essas datas.</li>
-                        </tr>
-                        {% endfor %}
-                        </tbody>
 
-                    </table>
+                    <tbody>
+
+                    {% for contrato in contratos %}
+                    <tr>
+                        <td><a>{{contrato.numcontrato}}</a></td>
+                        <td><a>{{contrato.imovel}}</a></td>
+                        <td><a>{{contrato.status}}</a></td>
+                        <td><a>{{contrato.morador}}</a></td>
+                        <td><a>{{contrato.aluguel}}</a></td>
+                        <td><a>{{contrato.data_entrada}}</a></td>
+                        <td><a>{{contrato.vigencia}}</a></td>
+                        <td><a>{{contrato.vencimento}}</a></td>
+
+                        {% empty %}
+                        <li>Desculpe, não encontrei nada com essas datas.</li>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
 
                 <br>
-                    {% if contratos %}
-                    <p style="margin-left: 78%"><b>Total: R${{somaContratos}}</b></p>
-                    {% endif %}
+
+                <p style="margin-left: 78%"><b>Total: R${{somaContratos}}</b></p>
+
+
                 <hr>
 
-
+             {% endif %}
             </div>
 
-                <div class="listagemGeral">
+            <div class="listagemGeral">
+                 <br>
 
-                    <!--                    <input class="u-full-width" type="text" placeholder="Localizar..." name="search_box">-->
+                 {% if historico %}
+                <!--                    <input class="u-full-width" type="text" placeholder="Localizar..." name="search_box">-->
 
-                    <!--                <a href="{% url 'import' %}">-->
-                    <!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
-                     <table class="table table-responsive-lg table-striped">
+                <!--                <a href="{% url 'import' %}">-->
+                <!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
+                <table class="table table-responsive-lg table-striped">
                     <thead>
-                         <h3 style="margin-left:37%;">Listagem de despesas</h3>
-                         <hr>
+                    <h3 style="margin-left:40%;">Listagem de histórico de contratos</h3>
+                    <hr>
+
+                    <tr>
+                        <th scope="col">Número do contrato</th>
+                        <th scope="col">Data de entrada</th>
+                        <th scope="col">Vencimento</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Data de encerramento</th>
+                        <th scope="col">Imovel</th>
+                        <th scope="col">Morador</th>
+                        <th scope="col">Alugel</th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                    {% for historicos in historico %}
+                    <tr>
+                        <td><a>{{historicos.numcontrato}}</a></td>
+                        <td><a>{{historicos.data_entrada}}</a></td>
+                        <td><a>{{historicos.vencimento}}</a></td>
+                        <td><a>{{historicos.status}}</a></td>
+                        <td><a>{{historicos.data_encerramento}}</a></td>
+                        <td><a>{{historicos.imovel}}</a></td>
+                        <td><a>{{historicos.morador}}</a></td>
+                        <td><a>{{historicos.aluguel}}</a></td>
+
+                        {% empty %}
+                        <li>Desculpe, não encontrei nada com essas datas.</li>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+                {% if historico %}
+                <br>
+                <p style="margin-left: 78%"><b>Total: R${{somaHistorico}}</b></p>
+                <hr>
+                <br>
+                {% endif %}
+            {% endif %}
+            </div>
+
+
+            <div class="listagemGeral">
+
+                <!--                    <input class="u-full-width" type="text" placeholder="Localizar..." name="search_box">-->
+
+                <!--                <a href="{% url 'import' %}">-->
+                <!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
+                <table class="table table-responsive-lg table-striped">
+                    <thead>
+                    <h3 style="margin-left:40%;">Listagem de despesas</h3>
+                    <hr>
                     {% if despesa %}
                     <tr>
                         <th scope="col">Imovel</th>
@@ -98,32 +174,35 @@
                     </tr>
                     {% endfor %}
 
+
                     </tbody>
 
                 </table>
-                    {% if despesa %}
-                    <br>
-                    <p style="margin-left: 78%"><b>Total: R${{somaDespesas}}</b></p>
-                    <hr>
-                    <br>
-                    {% endif %}
-
-                </div>
-
-                {% if contratos and despesa %}
-                <hr>
-                    {% if somaTotal > 0 %}
-                    <h3 style="margin-left: 60%"> Subtração dos valores total: <b>R${{somaTotal}}</b></h3>
-                    {% else %}
-                    <h3 style="margin-left: 60%"> Subtração dos valores total: <b style="color: red">R${{somaTotal}}</b></h3>
-                    {% endif %}
+                {% if despesa %}
+                <br>
+                <p style="margin-left: 78%"><b>Total: R${{somaDespesas}}</b></p>
                 <hr>
                 <br>
-
                 {% endif %}
-                {% block footer %}
 
-                {% endblock %}
+            </div>
+
+            {% if historico or contratos or despesas%}
+            <hr>
+            <p style="margin-left: 65%"><b>Intervalo de meses: {{meses}}</b></p>
+            <p style="margin-left: 65%">Data inicial: {{data_inicial}} - Data final: {{data_final}}</p>
+            {% if verifica %}
+            <h6 style="margin-left: 65%"> Subtração dos valores total: <b>R${{somaTotal}}</b></h6>
+            {% else %}
+            <h6 style="margin-left: 65%"> Subtração dos valores total: <b style="color: red">R${{somaTotal}}</b></h6>
+            {% endif %}
+            <hr>
+            <br>
+
+            {% endif %}
+            {% block footer %}
+
+            {% endblock %}
 
         </div>
     </div>

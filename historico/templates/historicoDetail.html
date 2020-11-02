@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Historico do Contrato{% endblock %}
+{% block sistema %}
+{% block menu %}
+{% include 'home/menu.html  ' %}
+{% endblock %}
+<div class="page">
+    <!-- navbar-->
+    {% block header %}
+    {% include 'home/header.html' %}
+    {% endblock %}
+    <!-- Counts Section -->
+    <div class="col-lg-12" style="margin-top:20px;">
+        <div class="card">
+            <div class="card-body">
+                <div class="listagemGeral">
+                    <hr>
+                    <h3 style="margin-left:37%;">Historico do contrato</h3>
+                    <hr>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Contrato:</label>
+                            <input type="text" class="form-control" value="{{historico.numcontrato}}" readonly>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Aluguel:</label>
+                            <input type="text" class="form-control" value="{{historico.aluguel}}" readonly>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Status:</label>
+                            <input type="text" class="form-control" value="{{historico.status}}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Imovel:</label>
+                        <input type="text" class="form-control" value="{{historico.imovel}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Morador:</label>
+                        <input type="text" class="form-control" value="{{historico.morador}}" readonly>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>Data entrada:</label>
+                            <input type="text" class="form-control" value="{{historico.data_entrada}}" readonly>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Vigencia:</label>
+                            <input type="text" class="form-control" value="{{historico.vigencia}}" readonly>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label>Vencimento:</label>
+                            <input type="text" class="form-control" value="{{historico.vencimento}}" readonly>
+                        </div>
+                    </div>
+                    <hr>
+                    <!---- mostra os documentos e fotos adicionados ao contrato selecionado--->
+                    <h3 style="margin-left:40%;">Anexo</h3>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                               role="tab"
+                               aria-controls="nav-home" aria-selected="true">Documentos</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                               role="tab"
+                               aria-controls="nav-profile" aria-selected="false">Fotos</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <br>
+                            {% block docview %}
+                            {% include 'documentoView.html' %}
+                            {% endblock %}
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <br>
+                            {% block photoview %}
+                            {% include 'photo_view.html' %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
+</div>
+{% endblock %}

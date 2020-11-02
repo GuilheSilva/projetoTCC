@@ -48,14 +48,18 @@ class contrato(models.Model):
     data_entrada = models.DateField()
     vigencia = models.IntegerField(blank=False, null=False)
     vencimento = models.DateField()
+    data_encerramento = models.DateField(blank=True, null=True)
     userid = models.IntegerField()
 
     def __str__(self):
       return self.numcontrato
 
+    class Meta:
+        db_table = 'contratos_contrato'
+
 class document(models.Model):
     data = models.DateField(default=datetime.datetime.today())
-    documento = models.ImageField(upload_to='documentos', null=False, blank=False)
+    documento = models.FileField(upload_to='documentos', null=False, blank=False)
     #contrato = models.ForeignKey(contrato,  null=False,blank=False,on_delete=models.PROTECT)
     contrato = models.CharField(max_length=15,null=False)
 

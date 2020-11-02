@@ -3,7 +3,7 @@
 {% block title %}Detalhe do Contrato{% endblock %}
 {% block sistema %}
 {% block menu %}
-{% include 'home/menu.html' %}
+{% include 'home/menu.html  ' %}
 {% endblock %}
 <div class="page">
     <!-- navbar-->
@@ -19,34 +19,39 @@
                     <h3 style="margin-left:37%;">Detalhe do contrato</h3>
                     <hr>
                     <div class="form-row">
-                        <div class="form-group col-md-1">
-                            <label for="inputEmail4">Contrato:</label>
-                            <input type="text" class="form-control" id="inputEmail4" value="{{contratos.numcontrato}}"
-                                   readonly="True">
+                        <div class="form-group col-md-3">
+                            <label>Contrato:</label>
+                            <input type="text" class="form-control" value="{{contratos.numcontrato}}" readonly>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Aluguel:</label>
+                            <input type="text" class="form-control" value="{{contratos.aluguel}}" readonly>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Status:</label>
+                            <input type="text" class="form-control" value="{{contratos.status}}" readonly>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="inputCity">Imovel:</label>
-                            <input type="text" class="form-control" id="" value="{{contratos.imovel}}" readonly="True">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputState">Morador:</label>
-                            <input type="text" class="form-control" id="" value="{{contratos.morador}}" readonly="True">
-                        </div>
+                    <div class="form-group">
+                        <label>Imovel:</label>
+                        <input type="text" class="form-control" value="{{contratos.imovel}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Morador:</label>
+                        <input type="text" class="form-control" value="{{contratos.morador}}" readonly>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-2">
-                            <label for="inputCity">Data de entrada:</label>
-                            <input type="text" class="form-control" value="{{contratos.data_entrada}}" readonly="True">
-                        </div>
-                        <div class="form-group col-md-1">
-                            <label for="inputState">Vigencia:</label>
-                            <input type="text" class="form-control" value="{{contratos.vigencia}}" readonly="True">
+                        <div class="form-group col-md-5">
+                            <label>Data entrada:</label>
+                            <input type="text" class="form-control" value="{{contratos.data_entrada}}" readonly>
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="inputZip">Vencimento:</label>
-                            <input type="text" class="form-control" value="{{contratos.vencimento}}" readonly="True">
+                            <label>Vigencia:</label>
+                            <input type="text" class="form-control" value="{{contratos.vigencia}}" readonly>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label>Vencimento:</label>
+                            <input type="text" class="form-control" value="{{contratos.vencimento}}" readonly>
                         </div>
                     </div>
                     <hr>
@@ -65,21 +70,24 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                              aria-labelledby="nav-home-tab">
-                            {% block docview %}
-                            {% include 'documentoView.html' %}
-                            {% endblock %}
                             <br>
                             {% block documento %}
                             {% include 'documento.html' %}
                             {% endblock %}
+
+
+                            {% block docview %}
+                            {% include 'documentoView.html' %}
+                            {% endblock %}
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            {% block photoview %}
-                            {% include 'photo_view.html' %}
-                            {% endblock %}
                             <br>
                             {% block photo %}
                             {% include 'photo_form.html' %}
+                            {% endblock %}
+
+                            {% block photoview %}
+                            {% include 'photo_view.html' %}
                             {% endblock %}
                         </div>
                     </div>
@@ -87,5 +95,8 @@
             </div>
         </div>
     </div>
+    {% block footer %}
+    {% include 'home/footer.html' %}
+    {% endblock %}
 </div>
 {% endblock %}

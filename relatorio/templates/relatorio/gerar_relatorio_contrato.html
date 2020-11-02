@@ -1,0 +1,88 @@
+{% load static %}
+<html>
+<style>
+table, td, th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+a {
+color: black;
+}
+
+
+
+</style>
+<body>
+<div class="container">
+    <hr>
+    <h3 style="margin-left:37%;">Listagem de contratos</h3>
+    <hr>
+    <!--                    <input class="u-full-width" type="text" placeholder="Localizar..." name="search_box">-->
+
+    <!--                <a href="{% url 'import' %}">-->
+    <!--                    <i class="material-icons" style="font-size:30px">file_upload</i></a>-->
+    <table>
+        <thead>
+
+
+        {% if contratos %}
+        <tr>
+            <th>Número do contrato</th>
+            <th>Imovel</th>
+            <th>Morador</th>
+            <th>Aluguel</th>
+            <th>Status</th>
+            <th>Data de entrada</th>
+            <th>Vigência</th>
+            <th>Vencimento</th>
+
+        </tr>
+
+        {% endif %}
+        </thead>
+
+
+        <tbody>
+        {% for contrato in contratos %}
+        <tr>
+            <td><a>{{contrato.numcontrato}}</a></td>
+            <td><a>{{contrato.imovel}}</a></td>
+            <td><a>{{contrato.morador}}</a></td>
+            <td><a>{{contrato.aluguel}}</a></td>
+            <td><a>{{contrato.status}}</a></td>
+            <td><a>{{contrato.data_entrada}}</a></td>
+            <td><a>{{contrato.vigencia}}</a></td>
+            <td><a>{{contrato.vencimento}}</a></td>
+
+            {% empty %}
+            <li>Desculpe, não encontrei nada com essas datas.</li>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+    <br>
+    {% if contratos %}
+    <p style="margin-left: 87%"><b>Intervalo de meses: {{meses}}</b></p>
+    <p style="margin-left: 87%">Data inicial:{{data_de_entrada}} - Data final: {{data_de_saida}}</p>
+    <p style="margin-left: 87%"><b>Total: R${{somaContratos}}</b></p>
+
+    {% endif %}
+    <hr>
+    <br>
+</div>
+</bodY>
+</html>
+
+
+
